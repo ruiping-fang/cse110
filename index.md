@@ -28,7 +28,8 @@
 
 ### Quoting code:
 
-```
+```python
+
 while(alive){
     eat();
     sleep();
@@ -37,6 +38,15 @@ while(alive){
     repeat();
 }
 
+# Here is the code segment for my sql project
+file_path = '../../DataSet/NDJSON_FILES/homogeneous.ndjson'
+# Load data from the NDJSON file
+with open(file_path, 'r') as file:
+    data = [json.loads(line) for line in file]
+
+# Connect to SQLite database
+conn = sqlite3.connect('http_logs.db')
+c = conn.cursor()
 
 ```
 
